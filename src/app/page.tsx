@@ -9,6 +9,7 @@ import { useState } from "react";
 import BalloonButton from "@/components/BalloonButton";
 import usePlaySound from "@/hooks/usePlaySound";
 import useConfetti from "@/hooks/useConfetti";
+import { BackgroundLines } from "@/components/ui/BackgroundLines";
 
 const Page = () => {
     const [isPopped, setIsPopped] = useState(false);
@@ -53,7 +54,10 @@ const Page = () => {
                     isPopped ? "block" : "hidden"
                 }`}
             >
-                {/* <Confetti  /> */}
+                <div className="bg-slate-950">
+                    <BackgroundLines children={<></>} />
+                </div>
+
                 <div className="absolute z-10">
                     <Image
                         src={"/hero_balloon.png"}
